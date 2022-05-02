@@ -1,0 +1,143 @@
+@use "../../scss/variables/varsColor";
+.add-meeting-page {
+    .sub-heading {
+        display: block;
+        padding: 0.5em;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    .start-time {
+        margin-bottom: 0;
+    }
+    .success-icon{
+        position: absolute;
+        color: varsColor.$success-color;
+        margin-top: 0em;
+        padding: 0em;
+        margin-left: 0.25em;
+       
+        text-align: center;
+    }
+    #success-added {
+        color: varsColor.$success-color;
+    }
+    #error-added {
+        color: rgb(160,7,7);
+    }
+    .input-icon i{
+        position: absolute;
+        margin-top:0.001em;
+        padding: 0.25em;
+        color: rgb(160,7,7);
+       
+    }
+
+    .email-rule-1,
+    .email-rule-2 {
+        font-size: 13.5px;
+        color: varsColor.$white-color;
+    }
+
+    .hour-time,
+    .minute-time {
+        width: 60px;
+        border-radius: 5px;
+    }
+
+    .error {
+        margin-top:0.25em;
+        color: rgb(160,7,7);
+        margin-left:0px;
+        padding-bottom:0.25em;
+    }
+
+
+    .meet {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        border-bottom: 1px solid varsColor.$light-grey-color;
+        a {
+            display: inline-block;
+            text-decoration: none;
+            color: varsColor.$grey-color;
+            &:active {
+                color: varsColor.$black-color;
+            }
+        }
+    }
+
+    .meet-item {
+        display: inline-block;
+        border-width: 1px;
+        border-style: solid;
+        margin-bottom: -1px;
+        border-color: transparent;
+        &.active:hover {
+            border: 1px solid varsColor.$light-grey-color;
+            border-bottom: 1px solid varsColor.$white-color;
+        }
+        &.active-link {
+            border: 1px solid varsColor.$light-grey-color;
+            border-bottom: 1px solid varsColor.$white-color;
+        }
+    }
+
+    .meet-link {
+        display: inline-block;
+        padding: 0.5em;
+    }
+
+    .meet-box {
+        border: 1px solid varsColor.$light-grey-color;
+        padding: 1em;
+        border-radius: 3px;
+        flex: 0 1 100%;
+    }
+
+    .inline-flex {
+        display: inline-flex;
+        align-items: center;
+    }
+
+    #email {
+        color: varsColor.$white-color;
+    }
+
+    #search-error,
+    #date-error {
+        color: rgb(160,7,7);
+        padding-bottom: 1em;
+    
+    }
+    .sr-only-blue {
+        position: absolute !important;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        white-space: nowrap;
+        color: varsColor.$blue-color;
+    }
+    .alert {
+        border: 1px solid black;
+        padding: 5px 0;
+        text-align: center;
+        font-weight: 600;
+        background-color: varsColor.$green-color;
+        color: varsColor.$white-color;
+    }
+    .alert-info {
+        border-color: varsColor.$green-color;
+    }
+    .alert-danger {
+        background-color: varsColor.$error-color;
+        border-color: varsColor.$error-color;
+    }
+    .hide {
+        display: none;
+        text-align: center;
+    }
+}

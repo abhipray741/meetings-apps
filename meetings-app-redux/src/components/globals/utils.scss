@@ -1,0 +1,132 @@
+@use "../../scss/variables/varsMargin";
+@use "../../scss/variables/varsPadding";
+
+.px-1 {
+    padding-left: varsPadding.$padding-1;
+    padding-right: varsPadding.$padding-1;
+}
+
+.px-2 {
+    padding-left: varsPadding.$padding-2;
+    padding-right: varsPadding.$padding-2;
+}
+
+.px-3 {
+    padding-left: varsPadding.$padding-3;
+    padding-right: varsPadding.$padding-3;
+}
+
+.px-4 {
+    padding-left: varsPadding.$padding-4;
+    padding-right: varsPadding.$padding-4;
+}
+
+.py-1 {
+    padding-top: varsPadding.$padding-1;
+    padding-bottom: varsPadding.$padding-1;
+}
+
+.py-2 {
+    padding-top: varsPadding.$padding-2;
+    padding-bottom: varsPadding.$padding-2;
+}
+
+.py-3 {
+    padding-top: varsPadding.$padding-3;
+    padding-bottom: varsPadding.$padding-3;
+}
+
+.py-4 {
+    padding-top: varsPadding.$padding-4;
+    padding-bottom: varsPadding.$padding-4;
+}
+
+.mx-1 {
+    margin-left: varsMargin.$margin-1;
+    margin-right: varsMargin.$margin-1;
+}
+.mx-2 {
+    margin-left: varsMargin.$margin-2;
+    margin-right: varsMargin.$margin-2;
+}
+.mx-3 {
+    margin-left: varsMargin.$margin-3;
+    margin-right: varsMargin.$margin-3;
+}
+.mx-4 {
+    margin-left: varsMargin.$margin-4;
+    margin-right: varsMargin.$margin-4;
+}
+.my-1 {
+    margin-top: varsMargin.$margin-1;
+    margin-bottom: varsMargin.$margin-1;
+}
+.my-2 {
+    margin-top: varsMargin.$margin-2;
+    margin-bottom: varsMargin.$margin-2;
+}
+.my-3 {
+    margin-top: varsMargin.$margin-3;
+    margin-bottom: varsMargin.$margin-3;
+}
+.my-4 {
+    margin-top: varsMargin.$margin-4;
+    margin-bottom: varsMargin.$margin-4;
+}
+
+.list-unstyled {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-inline li {
+    display: inline-block;
+}
+.btn {
+    padding: 0.5em 1em;
+    border: 0;
+    border-radius: 4px;
+    font-size: 0.85em;
+    /*hand icon appears on hovering*/
+    cursor: pointer;
+    
+}
+#btn-members{
+
+    margin-left: 0.5em;
+    height: 31.219px;
+}
+.btn-primary {
+    background-color: rgb(2, 104, 217);
+    color: white;
+}
+.btn-danger {
+    background-color: rgb(210, 35, 50);
+    color: white;
+}
+
+.btn:disabled {
+    cursor: none;
+    opacity: 0.8;
+}
+.sr-only {
+    position: absolute !important;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    color: white;
+}
+.container {
+    width: 92%;
+    margin: 0 auto; /*here auto is for left and right, the remaining 4% will be divided equally*/
+}
+/*for deskstop*/
+@media (min-width: 992px) {
+    .container {
+        width: 80%;
+        max-width: 1280px;
+    }
+}

@@ -1,0 +1,120 @@
+@use "../../scss/variables/varsColor";
+.teams-page {
+    .teams-page-flex {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .team-box {
+        border: 1px solid varsColor.$light-grey-color;
+        padding: 1em;
+        border-radius: 3px;
+        flex: 0 1 100%;
+    }
+    .last-box {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    .select-height {
+        height: 29.219px;
+        font-size: 10px;
+    }
+    .plus {
+        text-decoration: none;
+        font-size: 3em;
+        font-style: bold;
+        color: black;
+        border: none;
+        background-color: varsColor.$white-color;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .hide {
+        display: none;
+        text-align: center;
+    }
+    .teams-form {
+        display: flex;
+        flex-wrap: wrap;
+
+        > * {
+            flex: 0 0 100%;
+        }
+        .input {
+            width: 100%;
+            padding: 0.4em;
+            border: 1px solid lightgrey;
+            border-radius: 5px;
+        }
+        input:focus {
+            outline: 0;
+            border-color: #777;
+        }
+        &.error input {
+            border-color: varsColor.$error-color;
+        }
+        small {
+            color: varsColor.$error-color;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            visibility: hidden;
+        }
+        &.error small {
+            visibility: visible;
+        }
+    }
+
+    .team-id {
+        display: none;
+    }
+
+    .users {
+        width: 60%;
+        overflow: auto;
+        font-size: 1em;
+    }
+
+    .alert {
+        border: 1px solid varsColor.$black-color;
+        padding: 5px 0;
+        text-align: center;
+        font-weight: 600;
+        background-color: varsColor.$green-color;
+        color: varsColor.$white-color;
+    }
+    .alert-info {
+        border-color: varsColor.$green-color;
+    }
+    .alert-danger {
+        background-color: varsColor.$error-color;
+        border-color: varsColor.$error-color;
+    }
+    .error {
+        color: varsColor.$error-color;
+        font-size: 0.85em;
+        padding-top: 0.5em;
+    }
+    @media (min-width: 992px) {
+        .teams-page-flex {
+            flex-direction: row;
+            justify-content: space-between;
+
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        .team-box {
+            flex: 0 1 32%;
+        }
+    }
+}

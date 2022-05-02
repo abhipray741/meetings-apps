@@ -1,0 +1,73 @@
+@use "../../scss/variables/varsColor";
+
+.calendar-page {
+    .hours {
+        margin-left: 10px;
+        margin-right: 0;
+        padding: 0;
+        li {
+            font-size: small;
+            padding: 1em;
+            margin-bottom: 4px;
+            background-color: varsColor.$blue-color;
+            height: 40px;
+            width: 100%;
+        }
+    }
+
+    .calender {
+        position: relative;
+    }
+    .currentday {
+        color: rgb(110, 109, 109);
+    }
+
+    .meeting {
+        background-color: rgba(227, 235, 237, 0.9);
+        font-size: 0.7em;
+        padding: 6px;
+        width: calc(100% - 20px);
+        position: absolute;
+        left: 15px;
+    }
+    #meeting-1 {
+        top: 265px;
+        height: 38px;
+        left: 15px;
+    }
+    #meeting-2 {
+        position: absolute;
+        top: 353px;
+        height: 63px;
+    }
+    .meeting-name {
+        border-bottom: 1px solid rgb(178, 182, 184);
+        font-weight: 700;
+    }
+    .meeting-info {
+        padding-top: 4px;
+    }
+    .right-align {
+        text-align: right;
+    }
+    .alert {
+        border: 1px solid varsColor.$black-color;
+        padding: 5px 0;
+        text-align: center;
+        font-weight: 600;
+        background-color: varsColor.$green-color;
+        color: varsColor.$white-color;
+    }
+    .alert-info {
+        border-color: varsColor.$green-color;
+    }
+    .alert-danger {
+        background-color: varsColor.$error-color;
+        border-color: varsColor.$error-color;
+    }
+    .error {
+        color: varsColor.$error-color;
+        font-size: 0.85em;
+        padding-top: 0.5em;
+    }
+}

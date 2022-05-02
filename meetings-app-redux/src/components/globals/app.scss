@@ -1,0 +1,66 @@
+@use "../../scss/variables/varsColor";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.blue {
+    background-color: varsColor.$blue-color;
+    padding: 1em;
+    margin-top: 5px;
+
+    h2 {
+        color: varsColor.$white-color;
+    }
+}
+
+.ib {
+    display: block;
+    padding: 0.5em;
+}
+.form {
+    .input {
+        width: 100%;
+    }
+    textarea {
+        width: 100%;
+    }
+}
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.grey-font {
+    color: gray;
+}
+
+.sr-only {
+    border: 0;
+  clip: rect(0,0,0,0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+
+}
+.bottom-line{
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid ;
+}
+.bottom-line-button{
+    padding-bottom: 0.25em;
+    border-bottom: 1px solid !important;
+}

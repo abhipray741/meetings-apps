@@ -1,0 +1,156 @@
+@use "../../scss/variables/varsColor";
+
+.main-menu {
+    padding: 1em 0;
+    background-color: rgb(248, 249, 250);
+    a {
+        text-decoration: none;
+        color: varsColor.$grey-color;
+
+        &:first-child {
+            padding-left: 0;
+        }
+        &:active {
+            color: varsColor.$black-color;
+            background-color: varsColor.$nav-link-hover-color;
+        }
+    }
+
+    li {
+        &.active {
+            color: varsColor.$black-color;
+            background-color: varsColor.$nav-link-hover-color;
+            a {
+                color: varsColor.$black-color;
+            }
+        }
+        &:hover {
+            background-color: varsColor.$nav-link-hover-color;
+        }
+    }
+}
+
+.leftside {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    li {
+        flex: 0 0 100%;
+        padding: 0.5em 0;
+        border-bottom: 1px solid varsColor.$grey-color;
+    }
+    .no-hover:hover {
+        background-color: transparent;
+    }
+    li {
+        &:not(:first-child) {
+            display: none;
+        }
+        &:first-child {
+            border-bottom: none;
+        }
+    }
+}
+.rightside {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    li {
+        flex: 0 0 100%;
+        padding: 0.5em 0;
+        border-bottom: 1px solid varsColor.$grey-color;
+    }
+
+    li {
+        display: none;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+nav {
+    li.sub-menu-wrapper {
+        position: relative;
+    }
+    ul.sub-menu {
+        display: none; /*hiding submenu initially*/
+        position: absolute;
+        top: 30px;
+        left: 0px;
+        min-width: 100px;
+        border: 1px solid varsColor.$grey-color;
+        border-radius: 4px;
+        background-color: varsColor.$white-color;
+        padding: 1em;
+
+        a {
+            display: inline-block; /*for full width*/
+            width: 100%;
+            padding: 0.5em 1em;
+        }
+    }
+}
+
+.show {
+    display: block !important;
+}
+.fa-grey {
+    color: varsColor.$grey-color;
+}
+
+.d-flex {
+    display: flex;
+}
+.space-between {
+    justify-content: space-between;
+}
+
+.d-mobile-block {
+    display: block !important;
+}
+#user-email {
+    color: rgb(19, 118, 134);
+}
+@media (min-width: 992px) {
+    .d-desktop-none {
+        display: none !important;
+    }
+
+    .d-space-between {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .leftside {
+        li {
+            flex-basis: auto;
+            border-bottom: none;
+            padding: 0.5em 0.5em;
+            display: block !important;
+
+            &:nth-child(1) {
+                padding: 0;
+                margin: 0;
+            }
+            &:nth-child(2) {
+                padding-left: 0;
+                margin-left: 0;
+            }
+        }
+    }
+
+    .rightside {
+        li {
+            flex-basis: auto;
+            border-bottom: none;
+            padding: 0.5em 0.5em;
+            display: block !important;
+        }
+    }
+
+    .main-menu a:first-child {
+        padding-left: 0;
+    }
+}
